@@ -1,7 +1,6 @@
 <template>
-  <div class="callout success text-center">
+  <div class="callout success text-center border-none padding-2">
     <h1>That's Correct!</h1>
-    <hr>
     <button class="button primary" @click="onNextQuestion">Next Question</button>
   </div>
 </template>
