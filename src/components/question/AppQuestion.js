@@ -1,7 +1,7 @@
 const MODE_ADDITION = 1;
 const MODE_SUBTRACTION = 2;
 
-export default{
+export default{ 
   data() {
     return {
       question: 'Oops, an error ocurred :/',
@@ -56,12 +56,13 @@ export default{
       this.buttonData[correctButton].answer = correctAnswer;
     },
     generateRandomNumber(min, max, except) {
-      const rndNumber = Math.round(Math.random() * (max - min)) + min;
-      console.log(min, max, rndNumber);
-      if (rndNumber == except) {
+      const randomNumber = Math.round(Math.random() * (max - min)) + min;
+      console.log(min, max, randomNumber);
+      
+      if (randomNumber == except) {
         return this.generateRandomNumber(min, max, except);
       }
-      return rndNumber;
+      return randomNumber;
     },
     onAnswer(isCorrect) {
       this.$emit('answered', isCorrect);
